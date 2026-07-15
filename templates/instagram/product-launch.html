@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at 20% 30%, #1a3a1a 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 70%, #0d2b0d 0%, transparent 50%),
+                #050510;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #fff;
+  }
+  .card {
+    width: 920px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 48px;
+    padding: 64px;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 32px 64px rgba(0,0,0,0.5);
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(91,180,80,0.15);
+    color: #5BB450;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    border: 1px solid rgba(91,180,80,0.25);
+  }
+  h1 {
+    font-size: 68px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -0.03em;
+  }
+  .sub {
+    font-size: 22px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+    margin-bottom: 48px;
+    max-width: 70%;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .feature {
+    padding: 24px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .feature .icon { font-size: 28px; margin-bottom: 12px; }
+  .feature h3 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+  .feature p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.4; }
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(91,180,80,0.3), transparent);
+    margin-bottom: 32px;
+  }
+  .cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .price-block { display: flex; align-items: baseline; gap: 8px; }
+  .price { font-size: 40px; font-weight: 800; color: #5BB450; }
+  .price-label { font-size: 16px; color: rgba(255,255,255,0.4); }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #5BB450;
+    color: #000;
+    padding: 16px 40px;
+    border-radius: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .social-proof {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.4);
+  }
+  .avatars { display: flex; }
+  .avatars span {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    border: 2px solid #050510;
+    margin-left: -8px;
+    background: linear-gradient(135deg, #5BB450, #3a8a30);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 600;
+  }
+  .avatars span:first-child { margin-left: 0; }
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="badge">✦ {{badge}}</span>
+  <h1>{{headline}}</h1>
+  <p class="sub">{{subtext}}</p>
+  
+  <div class="features">
+    <div class="feature">
+      <div class="icon">{{feature_1_icon}}</div>
+      <h3>{{feature_1_title}}</h3>
+      <p>{{feature_1_desc}}</p>
+    </div>
+    <div class="feature">
+      <div class="icon">{{feature_2_icon}}</div>
+      <h3>{{feature_2_title}}</h3>
+      <p>{{feature_2_desc}}</p>
+    </div>
+    <div class="feature">
+      <div class="icon">{{feature_3_icon}}</div>
+      <h3>{{feature_3_title}}</h3>
+      <p>{{feature_3_desc}}</p>
+    </div>
+  </div>
+  
+  <div class="divider"></div>
+  
+  <div class="cta">
+    <div class="price-block">
+      <span class="price">${{price}}</span>
+      <span class="price-label">{{price_label}}</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:24px;">
+      <div class="social-proof">
+        <div class="avatars">
+          <span>{{avatar_1}}</span>
+          <span>{{avatar_2}}</span>
+          <span>{{avatar_3}}</span>
+        </div>
+        <span>{{proof_count}}+ sold</span>
+      </div>
+      <a class="cta-btn" href="#">{{cta_text}} →</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
