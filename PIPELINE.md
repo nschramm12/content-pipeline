@@ -174,26 +174,21 @@ Optimized Chromium flags:
 
 ### unDraw Illustrations (MIT)
 
-**Location:** `assets/undraw/` — 16 SVG illustrations  
-**Source:** [mkhairi/undraw](https://github.com/mkhairi/undraw) on GitHub (698 total available)
+**Location:** `assets/undraw/curated/` — 7 curated SVG illustrations  
+**Full set:** [mkhairi/undraw](https://github.com/mkhairi/undraw) on GitHub (698 total)
 
-Curated for business/marketing use: analytics, celebration, collaboration, community, content, creative_team, data, maker_launch, marketing, mobile, mobile_app, newsletter, online, shopping, target, team.
+Curated for business/marketing use: maker_launch, growth, team, launch, celebration, marketing, target.
 
-**Usage:** Inline SVG directly into HTML templates. All SVGs use `fill="currentColor"` or customizable fills — set `fill` or `stroke` via CSS to match the brand palette.
+**Usage:** Inline SVG directly into HTML templates. Set fill color via CSS to match brand palette.
 
 ### Heroicons (MIT)
 
-**Location:** `assets/heroicons/`  
-**Source:** [tailwindlabs/heroicons](https://github.com/tailwindlabs/heroicons) v2.2
+**Location:** `assets/heroicons/curated/` — 17 curated 24px outline icons  
+**Full set:** [tailwindlabs/heroicons](https://github.com/tailwindlabs/heroicons) v2.2 (1,288 icons)
 
-| Set | Size | Count | Use Case |
-|-----|------|-------|----------|
-| 24px outline | 24x24 | 324 | Feature icons, detail sections |
-| 24px solid | 24x24 | 324 | Bold icons, badges |
-| 20px solid | 20x20 | 324 | Compact icons, inline with text |
-| 16px solid | 16x16 | 316 | Micro icons, social proof |
+Curated: bolt, sparkles, chart-bar, rocket-launch, light-bulb, cog-6-tooth, currency-dollar, star, heart, check-badge, arrow-trending-up, clock, calendar, users, globe-alt, shield-check, arrow-right.
 
-Replace emoji icons in feature cards with Heroicons for a professional, consistent look. Inline SVG directly into templates — no build step needed.
+Replace emoji icons in feature cards with Heroicons for a professional, consistent look. To add more, copy from [heroicons.com](https://heroicons.com).
 
 ### shadcn/ui Card Patterns (MIT)
 
