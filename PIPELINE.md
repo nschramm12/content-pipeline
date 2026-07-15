@@ -168,10 +168,86 @@ Optimized Chromium flags:
 
 ---
 
+---
+
+## Asset Library
+
+### unDraw Illustrations (MIT)
+
+**Location:** `assets/undraw/` — 16 SVG illustrations  
+**Source:** [mkhairi/undraw](https://github.com/mkhairi/undraw) on GitHub (698 total available)
+
+Curated for business/marketing use: analytics, celebration, collaboration, community, content, creative_team, data, maker_launch, marketing, mobile, mobile_app, newsletter, online, shopping, target, team.
+
+**Usage:** Inline SVG directly into HTML templates. All SVGs use `fill="currentColor"` or customizable fills — set `fill` or `stroke` via CSS to match the brand palette.
+
+### Heroicons (MIT)
+
+**Location:** `assets/heroicons/`  
+**Source:** [tailwindlabs/heroicons](https://github.com/tailwindlabs/heroicons) v2.2
+
+| Set | Size | Count | Use Case |
+|-----|------|-------|----------|
+| 24px outline | 24x24 | 324 | Feature icons, detail sections |
+| 24px solid | 24x24 | 324 | Bold icons, badges |
+| 20px solid | 20x20 | 324 | Compact icons, inline with text |
+| 16px solid | 16x16 | 316 | Micro icons, social proof |
+
+Replace emoji icons in feature cards with Heroicons for a professional, consistent look. Inline SVG directly into templates — no build step needed.
+
+### shadcn/ui Card Patterns (MIT)
+
+**Location:** `assets/shadcn/patterns.md`  
+**Source:** [shadcn/ui Card](https://ui.shadcn.com/docs/components/base/card)
+
+Key patterns adopted:
+- Card header/content/footer semantic structure
+- `--card-padding` CSS variable for consistent spacing
+- Small variant for compact posts
+- Edge-to-edge content via negative margins
+
+### Creative Tim Patterns (MIT)
+
+**Location:** `assets/creative-tim/patterns.md`  
+**Source:** [Creative Tim Tailwind Components](https://www.creative-tim.com/twcomponents/component/social-media-post)
+
+Key patterns adopted:
+- Dense information hierarchy for social-optimized layouts
+- Icon-only action items for compact UI
+
+---
+
+## How to Use Assets in Templates
+
+### Heroicons in feature cards
+
+```html
+<div class="feature">
+  <svg class="icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />
+  </svg>
+  <h3>Cloud Sync</h3>
+  <p>Your data, everywhere you need it.</p>
+</div>
+```
+
+### unDraw illustrations as hero backgrounds
+
+```html
+<div class="hero-graphic">
+  <!-- Inline SVG from assets/undraw/undraw_maker_launch.svg -->
+  <svg><!-- ... --></svg>
+</div>
+```
+
+---
+
 ## Roadmap
 
+- [x] Asset library — unDraw, Heroicons, shadcn/ui patterns, Creative Tim patterns
 - [ ] Design system token JSON (shared between templates)
 - [ ] Variable injection via Node.js (template + data → filled HTML)
 - [ ] Batch rendering (multiple posts from one template + data file)
 - [ ] GitHub repo actions (render on push)
 - [ ] Style guide gallery page
+- [ ] Canva template import pipeline
